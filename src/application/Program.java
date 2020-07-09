@@ -11,11 +11,11 @@ public class Program {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Department obj = new Department(1, "Book");
-		System.out.println(obj);
-		Seller seller = new Seller(21,"Bob","bob@gmail.com.br", new Date(), 3000.0, obj);
+		
 		
 		SellerDao sellerDao = new DaoFactory().createSellerDao(); 
+		
+		Seller seller = sellerDao.findById(3);
 		//o programa não conhece a implementação, apenas a interface
 		System.out.println(seller);
 
