@@ -78,7 +78,7 @@ public class SellerDaoJDBC implements SellerDao {
 			st.setDate(3, new java.sql.Date(obj.getBirthDate().getTime()));
 			st.setDouble(4, obj.getBaseSalary());
 			st.setInt(5, obj.getDepartment().getId());
-			st.setInt(6, obj.getId());
+			st.setInt(6, obj.getId()); //id do vendedor
 			
 			st.executeUpdate();
 		}
